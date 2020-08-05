@@ -169,7 +169,7 @@
 						<div class="category-widget">
 							<ul>
 								@foreach ($category_widget as $hasil)
-								<li><a href="#">{{$hasil->nama}} <span>{{$hasil->posts->count()}}</span></a></li>
+								<li><a href="{{route('blog.category',$hasil->slug)}}">{{$hasil->nama}} <span>{{$hasil->posts->count()}}</span></a></li>
 									@endforeach
 								   
 								
