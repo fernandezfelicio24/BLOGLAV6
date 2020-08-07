@@ -37,8 +37,8 @@
 						<h3 class="footer-title">Tags</h3>
 						<div class="tags-widget">
 							<ul>
-								@foreach ($datatags as $data)
-									<li><a href="#">{{$data->nama}}</a></li>
+								@foreach ($datatags as $data2)
+									<li><a href="#">{{$data2->nama}}</a></li>
 								
 								@endforeach
 								

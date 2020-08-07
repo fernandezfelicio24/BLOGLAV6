@@ -35,8 +35,9 @@ class blogcontroller extends Controller
 
     public function list_category(category $category){
         $category_widget = Category::all();
-        $data =  $category->posts()->paginate();   
-        return view('blog.list_post',compact('data','category_widget'));
+        $data =  $category->posts()->paginate();
+        $datatags = Tags::all();   
+        return view('blog.list_post',compact('data','category_widget', 'datatags'));
     }
     
 
