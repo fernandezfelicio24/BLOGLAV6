@@ -5,21 +5,25 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Posts;
 use App\Category;
+use App\Tags;
 class blogcontroller extends Controller
 {
     public function index(Posts $posts){
         $category_widget = Category::all();
 
         $data = $posts->orderBy('created_at','desc')->take(6)->get();
+
+        $datatags = Tags::all();
        // $data = $posts->latest()->take(6)->get();
-        return view('welcome',compact('data','category_widget'));
+        return view('welcome',compact('data','category_widget' ,'datatags'));
     }
 
     public function isi_blog($slug){
         $category_widget = Category::all();
 
         $datablog = Posts::where('slug',$slug)->get();
-        return view('blog.isi_post',compact('datablog','category_widget'));
+        $datatags = Tags::all();
+        return view('blog.isi_post',compact('datablog','category_widget','datatags'));
     }
 
     public function list_post(){
