@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Valy Blog &mdash; Stisla</title>
-
+  <meta name="description" content="Website ini tentang blog sederhana"/>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="{{asset('teslatemp/assets/modules/bootstrap/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('teslatemp/assets/modules/fontawesome/css/all.min.css')}}">
