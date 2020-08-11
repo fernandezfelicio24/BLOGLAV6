@@ -30,7 +30,8 @@ class blogcontroller extends Controller
         $category_widget = Category::all();
 
         $data = Posts::latest()->paginate(6);
-        return view('blog.list_post',compact('data','category_widget'));
+        $datatags = Tags::all();  
+        return view('blog.list_post',compact('data','category_widget', 'datatags'));
     }
 
     public function list_category(category $category){
